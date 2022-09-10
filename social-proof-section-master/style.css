@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2? family= League+Spartan:wght@400;500;700 & display=swap');
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    /* Neutral */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 15px;
+    font-family:'League Spartan', sans-serif;
+    background: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+}
+
+
+.container{
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+}
+/*  ****************       HEADER    ****************  */
+.container-1 h1{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 64px 30px 64px;
+    color: var(--Very-Dark-Magenta);
+}
+.container-1 p{
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 28px;
+    font-weight: 500;
+    color: var(--Dark-Grayish-Magenta);
+}
+/************************    STARS ***************** */
+.container-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.star-review{
+    background-color: hsl(300,19%,81%);
+    border-radius: 4px;
+    margin: 8px 0;
+    color: var(--Very-Dark-Magenta);
+    width: 330px;
+    height: 80px;
+    padding: 15px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.star-review .stars{
+    min-width: 120px;
+}
+.star-review h3{
+    min-width: 240px;
+    text-align: center;
+}
+/* **********************  CARDS ******************* */
+.container-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.container-3 .person-review{
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--Light-Grayish-Magenta);
+    max-width: 300px;
+    height: 250px;
+    padding: 35px;
+    margin: 16px 24px 0 24px;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.person-review .data-review{
+    display: flex;
+    flex-direction: row;
+} 
+
+.container-3 .person-review img{
+    border-radius: 50%;
+    width: 50px;
+    margin-right: 25px;
+}
+.person-review .data-review div{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.person-review .data-review div h6{
+    color: var(--Soft-Pink);
+}
+.person-review p{
+    font-size: 12px;
+    line-height: 23px;
+    margin: 30px 0;
+
+}
+
+/***************************************************/
+@media only screen and (min-width: 376px) {
+    .container-2{
+        padding: 0 25px;
+    }
+    .star-review:nth-child(1){
+        align-self: flex-start;
+    }
+    .star-review:nth-child(3){
+        align-self: flex-end;
+    }
+    .container-3{
+        padding: 12px 0;
+    }
+    .person-review:nth-child(1){
+        align-self: flex-start;
+    }
+    .person-review:nth-child(3){
+        align-self: flex-end;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    body{
+        background: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
+        background-size: 580px;
+    }
+    .container{
+        margin: 125px 0;
+        max-width: 1110;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .container-1{
+        grid-column: 1 / 6;
+    }
+    .container-1 h1{
+        max-width: 375px;
+        font-size: 40px;
+        text-align: start;
+       
+    }
+    .container-1 p{
+        max-width: 375px;
+        text-align: start;
+        padding: 40px;
+        line-height: 25px;
+        padding-top: 10px;
+    }
+    .container-2{ 
+        grid-column: 6 / -1;
+    }
+    .star-review{
+        flex-direction: row;
+        height: 40px;
+        min-width: 390px;    
+        justify-content: center;   
+    }
+
+    .container-3{
+        grid-column: 1 / -1;
+    }
+    .container-3{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        border: 1px solid black;
+        align-items: flex-start;
+    }
+
+}
+
+
+
+
+
